@@ -38,7 +38,7 @@ exam_date1=new Date(Date.now());
     },
     getExamForResult(stu_id,batch_id,callback)
     {
-        return db.query("select se.*,r.*,e.* from student_exam se,result r,exam e WHERE se.Student_id=1  and se.Student_exam_id=r.Student_exam_id and se.Exam_id=e.Exam_id",[batch_id,stu_id],callback);
+        return db.query("select se.*,r.*,e.* from student_exam se,result r,exam e WHERE se.Student_id=?  and se.Student_exam_id=r.Student_exam_id and se.Exam_id=e.Exam_id",[stu_id,batch_id],callback);
     }
 }
 

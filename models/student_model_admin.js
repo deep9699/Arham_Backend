@@ -40,8 +40,8 @@ var student={
         console.log(item);
         var date=new Date(item.Date_of_birth);
         console.log(Student_id);
-        return db.query("update student set Password=?,Name=?,Batch_no=?,Email_id=?,Phone_no=?,Last_name=?,Middle_name=?,Parent_name=?,Parent_mobile_no=?,Address=?,Date_of_birth=?,Status=?,Fees=?,Joining_date=?,Gender=? where Student_id=?"
-        ,[item.Password,item.Name,item.Batch_no,item.Email_id,item.Phone_no,item.Last_name,item.Middle_name,item.Parent_name,item.Parent_mobile_no,item.Address,date,item.Status,item.Fees,join_date,item.Gender,Student_id],callback);
+        return db.query("update student set Password=?,Name=?,Batch_no=?,Email_id=?,Phone_no=?,Last_name=?,Middle_name=?,Parent_name=?,Parent_mobile_no=?,Address=?,Date_of_birth=?,Status=?,Fees=?,Gender=? where Student_id=?"
+        ,[item.Password,item.Name,item.Batch_no,item.Email_id,item.Phone_no,item.Last_name,item.Middle_name,item.Parent_name,item.Parent_mobile_no,item.Address,date,item.Status,item.Fees,item.Gender,Student_id],callback);
     },
     deleteStudent:function(Student_id,callback)
     {
